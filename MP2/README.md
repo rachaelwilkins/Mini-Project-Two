@@ -1,8 +1,7 @@
-# React + Vite
+Mini Project Two
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my second Mini Project, as part of my certificate in Software Engineering!
 
-Currently, two official plugins are available:
+For this project, I am developing (and testing, oh boy) my React skills to build an app for a World Clock. Users can type in a city, and get the exact time and date in an instant.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Nothing too flashy as we don't have much time to work on this, but (hopefully) effective nonetheless.
