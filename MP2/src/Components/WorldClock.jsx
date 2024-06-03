@@ -1,29 +1,58 @@
 import { useState, useEffect } from "react";
+import { PiSunFill } from "react-icons/pi";
+import { FaMoon } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 
-function WorldClock()
 
-const [timezone, setTimezone] = useState('');
+function WorldClock() {
 
-useEffect(() => {
-  fetch('https://worldtimeapi.org/api/timezone')
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => {
-      console.log(data);
-      setTimezone(data);
+  const [data, setData] = useState("");
+  const [searchCity, setSearchCity] = useState("");
+
+  function getTime() {
+    Axios.get(
+      `https://worldtimeapi.org/api/timezone`
+    ).then((response) => {
+      setData(response.data[0]);
     });
-}, []);
+  }
+  
+  return (
+    <div className="App">
+      <h1>World Clock</h1>
+      <div className="searchBox">
+        <input
+          type="text"
+          placeholder="Search city here..."
+          onChange={(e) => {
+            setSearchCity(e.target.value);
+          }}
+        />
+        <button
+          onClick={() => {
+            getTime();
+          }}
+        >
+          <FaSearch size="20px" />
+        </button>
+      </div>
+      <div>
+      <script>
+      </script>
+      </div>
 
-return (
-    <div className="Timezone componentBox">
-        <label>Set currency:
-            <select value={currency} onChange={e => setCurrency(e.target.value)}>
-                {options}
-            </select>
-        </label>
-        <p>Rate: {rate}</p>
+     // 
+
+      {data && (
+        <div className="showResults">
+        <h1>The time in {searchCity} is currently ${data[i].datetime}, ${data[i].day_of_week} June ${data[i].day_of_year}, 2024.</h1>   
+        </div>
+          
+        // TO DO: Need to see if there is a way to display data as Saturday 2 June, 2024 for example. Figure out 'if' function for displaying sun and moon icon. 
+  
+      )}
     </div>
-)
-
-export default WorldClock
+  );
+}
+ 
+export default WorldClock;
