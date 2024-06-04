@@ -4,13 +4,11 @@ import CssBaseline from '@mui/material/CssBaseline';
 import './App.css';
 import './Components/Login'
 import theme from './Components/Theme'
+import ButtonAppBar from './Components/NavBar';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <HomePage/>
-    </ThemeProvider>
+
   );
 }
 
