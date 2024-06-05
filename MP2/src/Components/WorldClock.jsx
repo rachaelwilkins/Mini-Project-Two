@@ -34,7 +34,7 @@ function WorldClock() {
 
       {data && (
         <div className="showResults">
-        <h1>The time in {searchCity} is currently {data.datetime.substring(11,16)}, ${data.day_of_week} June ${data.day_of_year}, 2024.</h1>   
+        <h1>Right now, the time in {data.timezone} is {data.datetime.substring(11,16)}, {data.day_of_week} June {data.datetime.substring(6,7)}, 2024.</h1>   
         </div>
           
         // TO DO: Need to see if there is a way to display data as Saturday 2 June, 2024 for example. Figure out 'if' function for displaying sun and moon icon. 
