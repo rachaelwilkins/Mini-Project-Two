@@ -25,12 +25,12 @@ export default function ButtonAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <NavLink id="link" to="/worldclock">Home</NavLink>
-            About
-            FAQs 
-            Contact 
+            <NavLink id="link" to="/">Home</NavLink>
+            <NavLink id="link" to="/worldclock"> World Clock</NavLink>
+            <NavLink id="link" to="/about">About</NavLink>
+            <NavLink id="link" to="/contact">Contact</NavLink>
             {currentUser?.email}
-          </Typography>
+          </Typography>   
           <button class="button"><a href="/login">Login</a></button>
         </Toolbar>
       </AppBar>
