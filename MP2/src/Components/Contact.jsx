@@ -2,6 +2,7 @@ import React from "react";
 
 const ContactPage = () => {
   return (
+    <div className="contactPage">
     <div>
       <h1>Contact World Clock</h1>
       <form>
@@ -19,6 +20,7 @@ const ContactPage = () => {
         </label>
         <button class="button">Submit</button>
       </form>
+    </div>
     </div>
   );
 };

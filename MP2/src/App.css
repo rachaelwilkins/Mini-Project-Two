@@ -2,7 +2,7 @@
 
 * {
   font-family: "Poppins", sans-serif;
-  color:black;
+  color:white;
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;  
@@ -32,11 +32,41 @@ input[type=text], select, textarea {
 }
 
 .worldClock {
-  background-size:auto ;
+  background-size: auto;
   background-image: url('./Images/clockPage.png');
-}
+  background-repeat: no-repeat;
+  min-height: 93vh;
+  min-width: 100%;
+ }
 
-#link {
-  margin-left: 32px;
-  color: black;
-}
+.homePage {
+  background-size: auto;
+  background-image: url('./Images/homePage.png');
+  background-repeat: no-repeat;
+  min-height: 93vh;
+  min-width: 100%;
+ }
+
+ .aboutPage {
+  background-size: auto;
+  background-image: url('./Images/aboutPage.png');
+  background-repeat: no-repeat;
+  min-height: 93vh;
+  min-width: 100%;
+ }
+
+ .contactPage {
+  background-size: auto;
+  background-image: url('./Images/contactPage.png');
+  background-repeat: no-repeat;
+  min-height: 93vh;
+  min-width: 100%;
+ }
+
+ .loginPage {
+  background-size: auto;
+  background-image: url('./Images/loginPage.png');
+  background-repeat: no-repeat;
+  min-height: 93vh;
+  min-width: 100%;
+ }

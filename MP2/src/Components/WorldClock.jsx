@@ -22,7 +22,7 @@ function WorldClock() {
   const slash = data?data.timezone.indexOf("/"):null
 
   return (
-    <div>
+    <div className="worldClock">
       <h1>World Clock</h1>
       {/* <div className="searchBox"> */}
         <input
