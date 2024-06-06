@@ -12,6 +12,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useUserContext } from '../Context/UserContext';
 
 function Copyright(props) {
   return (
@@ -29,10 +30,11 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function SignIn() {
+  const {handleUpdateUser}=useUserContext()
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
+    handleUpdateUser({
       email: data.get('email'),
       password: data.get('password'),
     });
@@ -50,8 +52,10 @@ export default function SignIn() {
             alignItems: 'center',
           }}
         >
-          <Typography component="h1" variant="h5">
-            World Clock
+          {currentUser?<><Typography component="h1" variant="h5">
+            Log out
+          </Typography></>:<><Typography component="h1" variant="h5">
+            Log in
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
@@ -62,7 +66,7 @@ export default function SignIn() {
               label="Email Address"
               name="email"
               autoComplete="email"
-              autoFocus
+              type="email"
             />
             <TextField
               margin="normal"
@@ -84,7 +88,7 @@ export default function SignIn() {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Log In
+              Sign In
             </Button>
             <Grid container>
               <Grid item xs>
@@ -98,7 +102,7 @@ export default function SignIn() {
                 </Link>
               </Grid>
             </Grid>
-          </Box>
+          </Box></>}
         </Box>
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>

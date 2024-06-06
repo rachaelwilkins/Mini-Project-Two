@@ -8,13 +8,16 @@ import './Components/Login'
 import WorldClock from './Components/WorldClock';
 import ButtonAppBar from './Components/NavBar';
 import AppRoutes from './Routes/AppRoutes';
+import { UserProvider } from './Context/UserContext';
 
 
 function App() {
   return (
     <div>
+    <UserProvider>
     <ButtonAppBar/>
     <AppRoutes/>
+    </UserProvider>  
     </div>
   )
 }

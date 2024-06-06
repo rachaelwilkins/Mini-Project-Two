@@ -3,6 +3,8 @@ import { PiSunFill } from "react-icons/pi";
 import { FaMoon } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import axios from "axios";
+import '../App.css';
+import { findWeekdayById } from "./ArrayPH";
 
 function WorldClock() {
   let OK=false
@@ -17,7 +19,8 @@ function WorldClock() {
       setData(response.data);
     });
   },[searchCity]) 
-  
+  const slash = data?data.timezone.indexOf("/"):null
+
   return (
     <div>
       <h1>World Clock</h1>
@@ -34,11 +37,9 @@ function WorldClock() {
 
       {data && (
         <div className="showResults">
-        <h1>Right now, the time in {data.timezone} is {data.datetime.substring(11,16)}, {data.day_of_week} June {data.datetime.substring(6,7)}, 2024.</h1>   
+        <h1>Right now, the time in {data?.timezone.substring(slash+1)} is {data.datetime.substring(11,16)}, {findWeekdayById(data.day_of_week).name} June {data.datetime.substring(6,7)}, 2024.</h1>   
         </div>
           
-        // TO DO: Need to see if there is a way to display data as Saturday 2 June, 2024 for example. Figure out 'if' function for displaying sun and moon icon. 
-  
       )}
     </div>
   );
