@@ -5,7 +5,7 @@ const ContactPage = () => {
   return (
     <div className="contactPage">
     <div>
-      <p>If you have feedback on our app, or have any questions, please get in touch with us below.</p>
+      <h2>If you have feedback on our World Clock, or have any questions, please get in touch with us below.</h2>
       <form>
         <label>
           Name:

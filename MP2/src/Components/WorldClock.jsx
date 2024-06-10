@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { FaSearch } from "react-icons/fa";
 import axios from "axios";
 import '../App.css';
 import { findWeekdayById } from "./ArrayDay";
 import { findMonthById } from "./ArrayMonth";
 import DropDown from "./DropDown";
+import { Typography } from "@mui/material";
 
 function WorldClock() {
   let OK=false
@@ -61,14 +61,10 @@ function WorldClock() {
 
   return (
     <div className="worldClock">
-      <h1>World Clock</h1>
       {timezoneList?<DropDown options={timezoneList} setOption={setChosenCity}/>:null}
       {data && (
         <div className="showResults">
-        <h1>Right now, the time in {data?.timezone.substring(slash+1)} is {data.datetime.substring(11,16)}, {findWeekdayById(data.day_of_week)} 
-           {findMonthById(data.datetime.substring(5,7))} 
-           {data.datetime.substring(8,10)}
-          , 2024.</h1>   
+        <h1>Right now, the time in {data?.timezone.substring(slash+1)} is {data.datetime.substring(11,16)}, {findWeekdayById(data.day_of_week)} {findMonthById(data.datetime.substring(5,7))} {data.datetime.substring(8,10)}, 2024.</h1>   
         </div>
           
       )}

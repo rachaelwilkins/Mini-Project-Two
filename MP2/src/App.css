@@ -30,8 +30,8 @@ h1 {
 
 input[type=text], select, textarea {
   background-color: white;
-  width: 50%; 
-  margin-left: 10%;
+  width: 40%; 
+  margin-left: 1%;  
   padding: 10px; 
   border: 1px solid grey;
   border-radius: 30px; 
@@ -44,52 +44,63 @@ input[type=text], select, textarea {
 
 .worldClock {
   color: white;
-  /* background-size: auto; */
   background-image: url('./Images/clockPage.png');
   background-repeat: no-repeat;
   min-height: 93vh;
   width: 100%;
+  align-content: center;
  }
 
 .homePage {
   color: white;
-  /* background-size: auto; */
-  background-image: url('./Images/homePage.png');
-  background-repeat: no-repeat;
-  min-height: 95vh;
-  width: 100%;
- }
-
- .aboutPage {
-  color: white;
-  /* background-size: auto; */
-  background-image: url('./Images/aboutPage.png');
-  background-repeat: no-repeat;
-  min-height: 95vh;
-  width: 100%;
- }
-
- .contactPage {
-  color: white;
-  /* background-size: auto; */
   background-image: url('./Images/contactPage.png');
   background-repeat: no-repeat;
   min-height: 95vh;
   width: 100%;
+  align-content: center;
+ }
+
+ .aboutPage {
+  color: white;
+  background-image: url('./Images/aboutPage.png');
+  background-repeat: no-repeat;
+  min-height: 95vh;
+  width: 100%;
+  align-content: center;
+ }
+
+ .contactPage {
+  color: white;
+  background-image: url('./Images/homePage.png');
+  background-repeat: no-repeat;
+  min-height: 95vh;
+  width: 100%;
+  align-content: center;
  }
 
  .loginPage {
   color: white;
-  /* background-size: auto; */
-  /* background-image: url('./Images/loginPage.png'); */
+  background-size: auto;
   background-repeat: no-repeat;
+  background-image: url('./Images/loginimage.png'); 
   min-height: 93vh;
   width: 100%;
+  padding: 1px;
   border-radius: 30px;
+  align-content: center;
  }
 
- /* .navBar {
+.faqPage {
+  background-image: url('./Images/faqPage.png');
+  background-repeat: no-repeat;
+  min-height: 95vh;
+  width: 100%;
   color: white;
-  background-color: transparent;
-  text-align: right;
- } */
+  align-content: center;
+ }
+
+ #link{
+  margin-left: 200px;
+  color: white;
+  align-items: end;
+}

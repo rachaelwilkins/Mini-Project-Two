@@ -12,7 +12,7 @@ export default function ButtonAppBar() {
   const {currentUser}=useUserContext()
   return (
       <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{backgroundColor: 'transparent'}}>
+      <AppBar position="static" sx={{backgroundColor: 'black'}}>
         <Toolbar>
           <IconButton
             size="large"
@@ -22,14 +22,15 @@ export default function ButtonAppBar() {
             sx={{ mr: 2 }}
           >
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h6" color="inherit" noWrap id="toolItems">
             <NavLink id="link" to="/">Home</NavLink>
             <NavLink id="link" to="/worldclock"> World Clock</NavLink>
             <NavLink id="link" to="/about">About</NavLink>
+            <NavLink id="link" to="/faq">FAQs</NavLink>
             <NavLink id="link" to="/contact">Contact</NavLink>
+            <NavLink id="link" to="/login">Login</NavLink>
             {currentUser?.email}
           </Typography>   
-          <button class="button"><a href="/login">Login</a></button>
         </Toolbar>
       </AppBar>
     </Box>
