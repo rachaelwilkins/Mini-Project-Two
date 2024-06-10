@@ -12,14 +12,13 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { useUserContext } from '../Context/UserContext';
 
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Rachael Wilkins
+        World Clock
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -30,11 +29,10 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function SignIn() {
-  const {handleUpdateUser}=useUserContext()
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    handleUpdateUser({
+    console.log({
       email: data.get('email'),
       password: data.get('password'),
     });
@@ -53,10 +51,8 @@ export default function SignIn() {
             alignItems: 'center',
           }}
         >
-          {currentUser?<><Typography component="h1" variant="h5">
-            Log out
-          </Typography></>:<><Typography component="h1" variant="h5">
-            Log in
+          <Typography component="h1" variant="h5">
+            Sign in
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
@@ -67,7 +63,7 @@ export default function SignIn() {
               label="Email Address"
               name="email"
               autoComplete="email"
-              type="email"
+              autoFocus
             />
             <TextField
               margin="normal"
@@ -103,7 +99,7 @@ export default function SignIn() {
                 </Link>
               </Grid>
             </Grid>
-          </Box></>}
+          </Box>
         </Box>
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>

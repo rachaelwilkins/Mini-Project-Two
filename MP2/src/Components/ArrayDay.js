@@ -9,8 +9,6 @@ const weekdays = [
   ];
   
   export const findWeekdayById = (id) => {
-    return weekdays.find(weekday => weekday.id === id);
+    const findDay = weekdays.find(weekday => weekday.id === id);
+    return(findDay.name);
   };
-
-  
-  

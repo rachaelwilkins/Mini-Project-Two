@@ -1,10 +1,11 @@
 import React from "react";
+import '../App.css';
 
 const ContactPage = () => {
   return (
     <div className="contactPage">
     <div>
-      <h1>Contact World Clock</h1>
+      <p>If you have feedback on our app, or have any questions, please get in touch with us below.</p>
       <form>
         <label>
           Name:
